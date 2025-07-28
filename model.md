@@ -112,3 +112,13 @@ pallet_config = {'capacidade_massa': 1000, 'capacidade_volume': 2.16}
    - Mais claras e alinhadas com a implementação (`f_i` e `s_{i,j}`).  
 
 ---
+
+#### **8. Limitações e Extensões**  
+- **Futuras Extensões**:  
+  - Incluir coordenadas 3D exatas para evitar sobreposição.  
+  - Adicionar restrições de agrupamento por destino.  
+- **Não Modelado**:  
+  - Eixos do caminhão (o código foca em paletes individuais).  
+
+**Referência Cruzada com o Código**:  
+- As restrições do modelo correspondem diretamente aos blocos `model.Add(...)` no método `otimizar` da classe `PalletOptimizer`.
