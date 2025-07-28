@@ -6,42 +6,40 @@
 #### **1. Conjuntos e Parâmetros**  
 | Símbolo | Descrição |  
 |---------|-----------|  
-| \( I \) | Conjunto de itens a serem paletizados (\( i \in I \)) |  
-| \( P \) | Conjunto de paletes disponíveis (\( p \in P \)) |  
-| \( K \) | Conjunto de orientações possíveis (\( k \in \{1, \dots, 6\} \), permutações de eixos) |  
+| $I$ | Conjunto de itens a serem paletizados $( i \in I)$ |  
+| $P$ | Conjunto de paletes disponíveis $(p \in P)$ |  
+| $K$ | Conjunto de orientações possíveis $( k \in \{1, \dots, 6\} )$, permutações de eixos) |  
 
 **Parâmetros dos Itens**:  
 | Parâmetro | Descrição |  
 |-----------|-----------|  
-| \( l_i, w_i, h_i \) | Dimensões (comprimento, largura, altura) do item \( i \) (em metros) |  
-| \( v_i \) | Volume do item \( i \) (\( v_i = l_i \times w_i \times h_i \)) |  
-| \( m_i \) | Massa do item \( i \) (em kg) |  
-| \( f_i \) | Binário: 1 se o item \( i \) é frágil, 0 caso contrário |  
-| \( o_i \) | Binário: 1 se o item \( i \) pode ser rotacionado, 0 caso contrário |  
-| \( \pi_i \) | Prioridade do item \( i \) (1 a 5, para ponderação na função objetivo) |  
+| $l_i, w_i, h_i$ | Dimensões (comprimento, largura, altura) do item $i$ (em metros) |  
+| $v_i$ | Volume do item $i$ $( v_i = l_i \times w_i \times h_i )$ |  
+| $m_i$ | Massa do item $i$ (em kg) |  
+| $f_i$ | Binário: 1 se o item $i$ é frágil, 0 caso contrário |  
+| $o_i$ | Binário: 1 se o item $i$ pode ser rotacionado, 0 caso contrário |  
+| $\pi_i$ | Prioridade do item $i$ (1 a 5, para ponderação na função objetivo) |  
 
 **Parâmetros das Paletes**:  
 | Parâmetro | Descrição |  
 |-----------|-----------|  
-| \( M_p \) | Capacidade máxima de massa da palete \( p \) (em kg) |  
-| \( V_p \) | Capacidade máxima de volume da palete \( p \) (em m³) |  
+| $M_p$ | Capacidade máxima de massa da palete $p$ (em kg) |  
+| $V_p$ | Capacidade máxima de volume da palete $p$ (em m³) |  
 
 ---
 
 #### **2. Variáveis de Decisão**  
 | Variável | Tipo | Descrição |  
 |----------|------|-----------|  
-| \( x_{i,p} \) | Binária | 1 se o item \( i \) está alocado na palete \( p \), 0 caso contrário |  
-| \( r_{i,k} \) | Binária | 1 se o item \( i \) está na orientação \( k \), 0 caso contrário |  
-| \( s_{i,j} \) | Binária | 1 se o item \( i \) está empilhado diretamente sobre o item \( j \), 0 caso contrário |  
+| $x_{i,p}$ | Binária | 1 se o item $i$ está alocado na palete $p$, 0 caso contrário |  
+| $r_{i,k}$ | Binária | 1 se o item $i$ está na orientação $k$, 0 caso contrário |  
+| $s_{i,j}$ | Binária | 1 se o item $i$ está empilhado diretamente sobre o item $j$, 0 caso contrário |  
 
 ---
 
 #### **3. Função Objetivo**  
 Maximizar o **volume total carregado**, ponderado pela prioridade dos itens:  
-$$
-\max \sum_{i \in I} \sum_{p \in P} x_{i,p} \cdot v_i \cdot \pi_i
-$$
+$\max \sum_{i \in I} \sum_{p \in P} x_{i,p} \cdot v_i \cdot \pi_i$
 
 **Justificativa**:  
 - O código implementa a ponderação por prioridade (`prioridade` no JSON de entrada).  
@@ -53,9 +51,7 @@ $$
 
 **4.1. Alocação Única**  
 Cada item deve estar em no máximo uma palete:  
-$$
-\sum_{p \in P} x_{i,p} \leq 1 \quad \forall i \in I
-$$
+$\sum_{p \in P} x_{i,p} \leq 1 \quad \forall i \in I$
 
 **4.2. Capacidade das Paletes**  
 - **Massa**:  
