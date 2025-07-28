@@ -97,9 +97,9 @@ streamlit run app.py
 
 Explore nossos guias detalhados:
 
-- [Tutorial Completo](docs/TUTORIAL.md)
-- [API Reference](docs/API.md)
-- [Business Case](docs/BUSINESS_CASE.pdf)
+- [Tutorial Completo: em implementação](docs/TUTORIAL.md)
+- [API Reference: em implementação](docs/API.md)
+- [Business Case: em implementação](docs/BUSINESS_CASE.pdf)
 
 ## 🤝 Parcerias Comerciais
 
@@ -108,7 +108,7 @@ Oferecemos:
 - **Customização** para fluxos específicos
 - **Treinamento** para equipes de logística
 
-**Contate nosso time:** parcerias@paletizadorinteligente.com.br
+**Contate nosso time:** jullyanolino@gmail.com
 
 ## 📄 Licença
 
