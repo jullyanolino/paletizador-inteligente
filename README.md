@@ -65,3 +65,60 @@ r = {}  # r[i,k]: rotação k do item i
 model.Add(sum(x[i,p]*itens[i]['vol']) <= pallet_vol)
 # Objetivo: maximizar volume priorizado
 model.Maximize(sum(x[i,p]*itens[i]['vol']*prioridade))
+
+
+## � Casos de Uso Ideais
+
+- **Centros de Distribuição** - Reduza custos de frete
+- **Indústrias** - Otimize expedições diárias
+- **E-commerce** - Diminua embalagens desnecessárias
+- **Transportadoras** - Aumente a rentabilidade por viagem
+
+## 🛠️ Instalação Fácil
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/paletizador-inteligente.git
+```
+
+2. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+
+3. Execute a aplicação:
+```bash
+streamlit run app.py
+```
+
+**Pronto!** Acesse `localhost:8501` no seu navegador.
+
+## 📚 Documentação Completa
+
+Explore nossos guias detalhados:
+
+- [Tutorial Completo](docs/TUTORIAL.md)
+- [API Reference](docs/API.md)
+- [Business Case](docs/BUSINESS_CASE.pdf)
+
+## 🤝 Parcerias Comerciais
+
+Oferecemos:
+- **Versão Enterprise** com recursos premium
+- **Customização** para fluxos específicos
+- **Treinamento** para equipes de logística
+
+**Contate nosso time:** parcerias@paletizadorinteligente.com.br
+
+## 📄 Licença
+
+MIT License - Livre para uso comercial e acadêmico.
+
+---
+
+**Transforme sua logística hoje mesmo!** ✨
+
+[![Deploy](https://img.shields.io/badge/Deploy_on-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=Streamlit)](https://share.streamlit.io/seu-usuario/paletizador-inteligente/main/app.py)
+``` 
+
+
