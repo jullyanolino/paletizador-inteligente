@@ -59,33 +59,21 @@ $$
 
 **4.2. Capacidade das Paletes**  
 - **Massa**:  
-  $$
-  \sum_{i \in I} x_{i,p} \cdot m_i \leq M_p \quad \forall p \in P
-  $$  
+  $\sum_{i \in I} x_{i,p} \cdot m_i \leq M_p \quad \forall p \in P$  
 - **Volume**:  
-  $$
-  \sum_{i \in I} x_{i,p} \cdot v_i \leq V_p \quad \forall p \in P
-  $$  
+  $\sum_{i \in I} x_{i,p} \cdot v_i \leq V_p \quad \forall p \in P$  
 
 **4.3. Orientação dos Itens**  
 - Itens rotacionáveis (\( o_i = 1 \)) devem ter exatamente uma orientação:  
-  $$
-  \sum_{k \in K} r_{i,k} = 1 \quad \forall i \in I \mid o_i = 1
-  $$  
+  $\sum_{k \in K} r_{i,k} = 1 \quad \forall i \in I \mid o_i = 1$  
 - Itens não rotacionáveis (\( o_i = 0 \)) mantêm a orientação padrão (\( k = 1 \)):  
-  $$
-  r_{i,1} = 1 \quad \forall i \in I \mid o_i = 0
-  $$  
+  $r_{i,1} = 1 \quad \forall i \in I \mid o_i = 0$  
 
 **4.4. Empilhamento**  
 - **Fragilidade**: Itens frágeis não podem ser sobrepostos:  
-  $$
-  f_j = 1 \Rightarrow s_{i,j} = 0 \quad \forall i, j \in I
-  $$  
+  $f_j = 1 \Rightarrow s_{i,j} = 0 \quad \forall i, j \in I$  
 - **Peso**: Itens mais pesados não podem estar sobre mais leves:  
-  $$
-  s_{i,j} = 1 \Rightarrow m_i \leq m_j \quad \forall i, j \in I
-  $$  
+  $s_{i,j} = 1 \Rightarrow m_i \leq m_j \quad \forall i, j \in I$  
 
 **4.5. Não Sobreposição**  
 - Implementada indiretamente no código via restrições de empilhamento e orientação.  
@@ -97,7 +85,7 @@ $$
 1. **Agrupamento por Destino**:  
    - Não modelado matematicamente no código, mas os itens têm atributo `destino` para uso futuro em roteirização.  
 2. **Visualização 3D**:  
-   - O código usa `r_{i,k}` para renderizar a orientação final dos itens.  
+   - O código usa `$r_{i,k}$` para renderizar a orientação final dos itens.  
 
 ---
 
@@ -112,7 +100,7 @@ pallet_config = {'capacidade_massa': 1000, 'capacidade_volume': 2.16}
 ```
 
 **Tradução para o Modelo**:  
-- \( I = \{0, 1\} \), \( P = \{0\} \) (1 palete).  
+- $I = \{0, 1\} \), \( P = \{0\}$ (1 palete).  
 - Restrições:  
   - $x_{0,0} \cdot 20 + x_{1,0} \cdot 15 \leq 1000$ (massa),  
   - $x_{0,0} \cdot 0.06 + x_{1,0} \cdot 0.036 \leq 2.16$ (volume).  
