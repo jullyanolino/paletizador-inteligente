@@ -114,8 +114,8 @@ pallet_config = {'capacidade_massa': 1000, 'capacidade_volume': 2.16}
 **Tradução para o Modelo**:  
 - \( I = \{0, 1\} \), \( P = \{0\} \) (1 palete).  
 - Restrições:  
-  - \( x_{0,0} \cdot 20 + x_{1,0} \cdot 15 \leq 1000 \) (massa),  
-  - \( x_{0,0} \cdot 0.06 + x_{1,0} \cdot 0.036 \leq 2.16 \) (volume).  
+  - $x_{0,0} \cdot 20 + x_{1,0} \cdot 15 \leq 1000$ (massa),  
+  - $x_{0,0} \cdot 0.06 + x_{1,0} \cdot 0.036 \leq 2.16$ (volume).  
 
 ---
 
@@ -123,7 +123,7 @@ pallet_config = {'capacidade_massa': 1000, 'capacidade_volume': 2.16}
 1. **Prioridades na Função Objetivo**:  
    - O modelo original maximizava apenas volume, ignorando criticidade dos itens.  
 2. **Orientação Explícita**:  
-   - Variáveis \( r_{i,k} \) foram formalizadas para refletir o código.  
+   - Variáveis $r_{i,k}$ foram formalizadas para refletir o código.  
 3. **Restrições de Empilhamento**:  
    - Mais claras e alinhadas com a implementação (`f_i` e `s_{i,j}`).  
 
